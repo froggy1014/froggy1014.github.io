@@ -2,24 +2,48 @@
    ARCHIVE
    ========================================================================== */
 
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+}
+
 .archive {
+  width: 100%;
+  // max-width: 40%;
   margin-top: 1em;
   margin-bottom: 2em;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 
-  @include breakpoint($large) {
-    float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
-  }
 
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+  // @include breakpoint($large) {
+  //   float: right;
+  //   width: calc(100% - #{$right-sidebar-width-narrow});
+  //   padding-right: $right-sidebar-width-narrow;
+  // }
+
+  // @include breakpoint($x-large) {
+  //   width: calc(100% - #{$right-sidebar-width});
+  //   padding-right: $right-sidebar-width;
+  // }
+  @include breakpoint($small) {
+    width: 45%;
   }
 }
 
 .archive__item {
   position: relative;
+  display: flex;
+  width: 100%;
+  gap: 0.5em;
+  justify-content: start;
+  align-items: center;
 
   a {
     position: relative;
@@ -44,7 +68,12 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  // margin-bottom: 0.25em;
+  max-width: 80%;
+  overflow: hidden !important;
+  white-space: nowrap;
+  color: $link-color;
+  font-size: large;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
@@ -64,8 +93,11 @@
   }
 }
 
+
+
 /* remove border*/
 .page__content {
+  margin-top: 1em;
   .archive__item-title {
     margin-top: 1em;
     border-bottom: none;
@@ -75,6 +107,7 @@
 .archive__item-excerpt {
   margin-top: 0;
   font-size: $type-size-6;
+  color: $gray;
 
   & + p {
     text-indent: 0;
@@ -125,6 +158,9 @@
    ========================================================================== */
 
 .list__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   .page__meta {
     margin: 0 0 4px;
     font-size: 0.6em;
@@ -461,3 +497,24 @@
 		display: inline-block;
 	}
 }
+
+
+/* ==========================================================================
+   COMMENTS
+   ========================================================================== */
+
+  .entries-list {
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+  } 
+
+  .archive__post-title {
+    max-width: 100px !important;
+    letter-spacing: 1px;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    color: $link-color;
+    font-size: large;
+   }

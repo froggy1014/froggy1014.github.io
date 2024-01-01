@@ -1,11 +1,11 @@
 {
-  "name": "minimal-mistakes",
+  "name": "evan-blog",
   "private": true,
   "version": "4.24.0",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
+  "description": "evan's blog with jekyll and minimal-mistakes theme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git@github.com:froggy1014/froggy1014.github.io.git"
   },
   "keywords": [
     "jekyll",
@@ -15,9 +15,9 @@
   "author": "Michael Rose",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/froggy1014/froggy1014.github.io/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://froggy1014.github.io/",
   "engines": {
     "node": ">= 0.10.0"
   },

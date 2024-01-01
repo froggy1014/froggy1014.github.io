@@ -1,0 +1,59 @@
+/* ==========================================================================
+   BANNER
+   ========================================================================== */
+
+.banner {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    article {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+.banner-image {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.banner-sns {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner-sns {
+    flex-shrink: 0;
+}
+
+.banner-sns .icon-item {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+@media all and (max-width: $medium) {
+    .banner{
+        flex-direction: column;
+        align-items: flex-start;
+
+        article {
+            padding: 20px 0;
+        }
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+  }
+  

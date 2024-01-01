@@ -1,0 +1,32 @@
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+<section class="banner">
+    <div class="banner-image">
+        <img width="200" height="200" src="/assets/img/evan-logo.JPG" alt="evan">
+    </div>
+    
+    <article>
+        <h1>Jeongmin Lee</h1>
+        <p>I am a front-end developer who loves to learn new things and always wants to be on the bleeding edge.</p>
+        <div class="banner-sns">
+            {% if author.links %}
+            {% for link in author.links %}
+              {% if link.label and link.url %}
+              <div class="icon-item">
+                {% if link.label == 'Email' %}
+                    <a href="mailto:{{ link.url }}" target="_blank" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}>
+                        <img width="20" hight="20" src="/assets/logo/{{ link.icon }}.svg" alt="{{ link.label }}" />
+                    </a>
+                {% else %}
+                    <a href="{{ link.url }}" target="_blank" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}>
+                        <img width="20" hight="20" src="/assets/logo/{{ link.icon }}.svg" alt="{{ link.label }}" />
+                    </a>
+                {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+    </article>
+</section>
