@@ -13,6 +13,9 @@
   max-width: 100%;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include breakpoint($x-large) {
     max-width: $max-width;
@@ -36,15 +39,17 @@ body {
 }
 
 .page {
-  @include breakpoint($large) {
-    float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
-  }
+  // @include breakpoint($large) {
+  //   float: right;
+    width: 90%;
+  //   padding-right: $right-sidebar-width-narrow;
+  // }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: 100%;
+    max-width: 800px;
+    // width: calc(100% - #{$right-sidebar-width});
+    // padding-right: $right-sidebar-width;
   }
 
   .page__inner-wrap {
@@ -129,7 +134,7 @@ body {
   p,
   li,
   dl {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   /* paragraph indents */
@@ -591,4 +596,8 @@ body {
       padding-right: 0;
     }
   }
+}
+
+highlight {
+  background-color: #1b585b;
 }

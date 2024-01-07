@@ -15,15 +15,20 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
+  
   {% include banner.html %}
-
-
 
   <section class="archive-container">
 
-  {% include recent_post.html %}
+    {% include recent_post.html %}
+  
+  </section>
 
-  {% include flutter_post.html %}
+  <section class="archive-container">
+
+    {% include study_post.html %}
+
+    {% include flutter_post.html %}
 
   </section>
 
@@ -35,13 +40,7 @@ layout: default
   
   </section>
  
-  <section class="archive-container">
-
-  {% include study_post.html %}
-
-  <!-- {% include review_post.html %} -->
   
-  </section>
   
   <!-- </section> -->
  
