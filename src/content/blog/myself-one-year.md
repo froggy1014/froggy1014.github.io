@@ -1,12 +1,12 @@
 ---
 author: Evan Lee
-pubDatetime: 2022-02-6T15:22:00Z
-title: 프론트엔드 지난 1년 회고
+pubDatetime: 2024-02-6T15:22:00Z
+title: Myself One Year
 slug: myself-one-year
-featured: true
+reviews: true
 draft: false
 tags:
-  - docs
+  - review
 description: 지난 일년간의 회고
 ---
 
@@ -48,10 +48,13 @@ description: 지난 일년간의 회고
 
 작년에 인프콘, 데브페스트 등 컨퍼런스를 다녀보면서 동기부여를 여러모로 받을 수 있었다. 물론 이 컨퍼런스라는 것을 통해서 어떤 지식을 얻어가는게 아닌 키워드를 얻어가고 또 이렇게 인사이트를 얻어가려고 열심히 하는 개발자분들 보면서 더 열심히 해야겠다는 생각이 든다.
 
-<div align="center"> 
- <img src="/assets/img/240206/inflearn.png" width="300" />
- <img src="/assets/img/240206/devfest.png" width="300" />
-</div>
+<!-- <div align="center">  -->
+ <!-- <img src="/assets/img/240206/inflearn.png" width="300" /> -->
+ <!-- <img src="/assets/img/240206/devfest.png" width="300" /> -->
+
+![inflearn](/src/assets/images/conference.png)
+
+<!-- </div> -->
 
 > ### 4. 운동은 꾸준히 하자 🏋️
 

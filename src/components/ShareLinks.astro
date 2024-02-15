@@ -6,20 +6,9 @@ const URL = Astro.url;
 
 const shareLinks = [
   {
-    name: "Copy",
+    name: "Github",
     href: `${URL}`,
     linkTitle: `Copy link`,
-  },
-  {
-    name: "LinkedIn",
-    href: `https://www.linkedin.com/shareArticle?mini=true&url=${URL}`,
-    linkTitle: `Share this post on LinkedIn`,
-  },
-
-  {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Share this post via email`,
   },
 ] as const;
 ---
