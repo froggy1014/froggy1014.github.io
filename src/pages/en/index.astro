@@ -1,0 +1,147 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { SOCIALS } from "@config";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+const studyPosts = sortedPosts.filter(({ data }) => data.study);
+const reviewsPosts = sortedPosts.filter(({ data }) => data.reviews);
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+      <h1>esfqwefqwef</h1>
+
+      <h1>{t("profile.name")}</h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="rss-link text-2xl"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <h1 class="inline">🐸</h1>
+        <span class="sr-only">RSS Feed</span>
+      </a>
+
+      <p>
+        {t("profile.introduce")}
+      </p>
+      {
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">{t("w.social_link")}:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <Hr />
+
+    {
+      studyPosts.length > 0 && (
+        <>
+          <section id="study">
+            <h2>{t("w.study")}</h2>
+            <ul>
+              {studyPosts.map(({ data, slug }) => (
+                <Card
+                  href={`/posts/${slug}/`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          {studyPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      reviewsPosts.length > 0 && (
+        <section id="reviews">
+          <h2>{t("w.reflections")}</h2>
+          <ul>
+            {reviewsPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/posts/${slug}/`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="all-posts-btn-wrapper">
+      <LinkButton href="/posts/">
+        {t("w.all_posts")}
+        <svg xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+          ></path>
+        </svg>
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #study,
+  #reviews {
+    @apply pb-6 pt-12;
+  }
+  #study h2,
+  #reviews h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>
