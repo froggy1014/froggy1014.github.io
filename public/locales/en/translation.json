@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "title": "Evan's Edge",
+    "name": "Evan Lee",
+    "introduce": "Hi, I'm Lee Jung-min, a front-end developer who is always on the bleeding edge, eager to learn new things, and curious."
+  },
+  "w": {
+    "social_link": "Social Link",
+    "posts": "Posts",
+    "tags": "Tags",
+    "study": "Study",
+    "all_posts": "All Posts",
+    "reflections": "Reflections"
+  },
+  "404": {
+    "title": "404",
+    "description": "Page not found",
+    "go_back": "Go back home"
+  }
+}
