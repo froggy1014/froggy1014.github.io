@@ -2,12 +2,19 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
+import LanguageSelect from "./LanguageSelect.astro";
+import i18next from "i18next";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "search";
 }
 
 const { activeNav } = Astro.props;
+const currentLangauge = i18next.language;
+
+function getUrl(path: string, currentLanguage: string) {
+  return currentLanguage === "ko" ? `/${path}` : `/en/${path}`;
+}
 ---
 
 <header>
@@ -56,18 +63,25 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
-              Posts
+            <a
+              href={getUrl("posts", currentLangauge)}
+              class={activeNav === "posts" ? "active" : ""}
+            >
+              {i18next.t("w.posts")}
             </a>
           </li>
           <li>
-            <a href="/tags/" class={activeNav === "tags" ? "active" : ""}>
-              Tags
+            <a
+              href={getUrl("tags", currentLangauge)}
+              class={activeNav === "tags" ? "active" : ""}
+            >
+              {i18next.t("w.tags")}
             </a>
           </li>
+
           <li>
             <LinkButton
-              href="/search/"
+              href={getUrl("search", currentLangauge)}
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === "search" ? "active" : ""
               } flex`}
@@ -84,6 +98,7 @@ const { activeNav } = Astro.props;
               <span class="sr-only">Search</span>
             </LinkButton>
           </li>
+          <LanguageSelect showFlag={true} class="language-flag" />
           {
             SITE.lightAndDarkMode && (
               <li>
@@ -181,6 +196,10 @@ const { activeNav } = Astro.props;
   }
   .menu-icon.is-active .close {
     @apply opacity-100;
+  }
+
+  .language-flag {
+    @apply w-10 h-10 bg-transparent;
   }
 </style>
 
