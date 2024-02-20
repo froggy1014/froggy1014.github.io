@@ -12,15 +12,18 @@
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "cz": "cz",
     "prepare": "husky",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "gen-locale-page": "npx astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.3",
     "@astrojs/rss": "^4.0.2",
     "@resvg/resvg-js": "^2.6.0",
     "astro": "^4.2.1",
+    "astro-i18next": "^1.0.0-beta.21",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
+    "react-i18next": "^14.0.5",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
     "satori": "^0.10.11",
