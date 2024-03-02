@@ -21,7 +21,10 @@ function getUrl(path: string, currentLanguage: string) {
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo whitespace-nowrap">
+      <a
+        href={`/${currentLangauge === "ko" ? "" : "en/"}`}
+        class="logo whitespace-nowrap"
+      >
         {
           LOGO_IMAGE.enable ? (
             <img

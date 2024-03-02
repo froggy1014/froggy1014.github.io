@@ -10,6 +10,8 @@ import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 import { t, changeLanguage } from "i18next";
+import { getLocalizePath } from "@utils/getLocalizePath";
+import i18next from "i18next";
 
 changeLanguage("en");
 
@@ -18,6 +20,7 @@ const sortedPosts = getSortedPosts(posts);
 const studyPosts = sortedPosts.filter(({ data }) => data.study);
 const reviewsPosts = sortedPosts.filter(({ data }) => data.reviews);
 const socialCount = SOCIALS.filter(social => social.active).length;
+const currentLanguage = i18next.language;
 ---
 
 <Layout>
@@ -59,7 +62,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {studyPosts.map(({ data, slug }) => (
                 <Card
-                  href={`/posts/${slug}/`}
+                  href={getLocalizePath(
+                    Astro.url.href + `/posts/${slug}/`,
+                    currentLanguage
+                  )}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -80,7 +86,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/posts/${slug}/`}
+                    href={getLocalizePath(
+                      Astro.url.href + `/posts/${slug}/`,
+                      currentLanguage
+                    )}
                     frontmatter={data}
                     secHeading={false}
                   />

@@ -1,10 +1,15 @@
-export const getLocalizePath = (pathname: string, language: string) => {
-  const path = pathname.split("/");
-  if (path[1] === "en") {
-    path.splice(1, 1);
-  } else if (path[1] !== "ko") {
-    path.splice(1, 0, language);
+export const getLocalizePath = (url: string, language: string) => {
+  const isProd = process.env.NODE_ENV === "production";
+
+  const protocol = isProd ? "https://" : "http://";
+  const hostName = isProd ? "froggy1014.github.io" : "localhost:4321";
+  const lang = language === "ko" ? "" : "en";
+
+  let pathName = url.split(hostName)[1];
+
+  if (pathName.startsWith("/en/")) {
+    pathName = pathName.split("/en/")[1];
   }
 
-  return path.join("/");
+  return `${protocol}${hostName}/${lang}${pathName}`;
 };
