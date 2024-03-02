@@ -4,7 +4,7 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+      - name: .env setting
+        run: |
+          echo "PUBLIC_GOOGLE_SITE_VERIFICATION=${{ secrets.PUBLIC_GOOGLE_SITE_VERIFICATION }}" >> .env
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
