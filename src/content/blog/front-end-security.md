@@ -1,5 +1,5 @@
 ---
-author: Evan Lee
+author: 프로기
 pubDatetime: 2024-02-2T15:22:00Z
 title: 프론트엔드 개발을 위한 보안 입문 (서평)
 slug: fe-security
@@ -7,7 +7,9 @@ reviews: true
 draft: false
 tags:
   - review
-description: 서평단으로써의 후기
+  - 프론트엔드 개발을 위한 보안 입문
+  - 프론트엔드 보안
+description: 서평단으로 받은 프론트엔드 개발을 위한 보안 입문이라는 책에 대한 서평을 작성해 보았습니다.
 ---
 
 ## 목차

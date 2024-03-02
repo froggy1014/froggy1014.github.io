@@ -1,13 +1,15 @@
 ---
-author: Evan Lee
-pubDatetime: 2023-01-28T15:22:00Z
-title: what's SWR ?
+author: 프로기
+pubDatetime: 2024-01-15T15:22:00Z
+title: SWR ( stale-while-revalidate ) 이란 뭘까? ?
 slug: swr
 study: true
 draft: false
 tags:
   - review
-description: SWR 라이브러리 정리
+  - SWR
+  - Server State Managerment
+description: SWR이란 상태 관리 라이브러리 대해 공부를 하고 정리한 기록입니다.
 ---
 
 > 현재 회사에서 사용중인 서버 상태 라이브러리 SWR에 대해서 알아보고자 한다.

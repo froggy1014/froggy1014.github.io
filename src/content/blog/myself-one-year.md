@@ -1,13 +1,16 @@
 ---
-author: Evan Lee
+author: 프로기
 pubDatetime: 2024-02-6T15:22:00Z
-title: Myself One Year
+title: 프론트엔드 개발자로써 벌써 일년...
 slug: myself-one-year
 reviews: true
 draft: false
 tags:
   - review
-description: 지난 일년간의 회고
+  - 프론트엔드 개발자
+  - 1년 회고
+  - 프엔 1년 회고
+description: 프론트엔드 개발자로 취업하고 나서 벌써 1년이 지난 것에 대한 회고를 기록했습니다.
 ---
 
 ## 들어가며

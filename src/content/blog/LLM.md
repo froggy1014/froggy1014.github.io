@@ -1,13 +1,13 @@
 ---
-author: Evan Lee
-pubDatetime: 2023-01-28T15:22:00Z
-title: What's LLM ?
+author: 프로기
+pubDatetime: 2024-01-28T15:22:00Z
+title: LLM ( Large Language Model ) 이란 뭘까 ? feat. 🦜🔗
 slug: llm
 study: true
 draft: false
 tags:
   - review
-description: 간략한 LLM 정리 및 토이 프로젝트
+description: LLM에 대해서 공부한 내용을 정리하고, 간단한 토이프로젝트를 진행한 것에 대한 기록입니다.
 ---
 
 <br>
