@@ -20,7 +20,7 @@ const { pathname, href } = Astro.url;
 const { showFlag = false, languageMapping, ...attributes } = Astro.props;
 ---
 
-<select onchange="location = this.value;" {...attributes}>
+<select onchange="location = `${this.value}`" {...attributes}>
   {
     supportedLanguages?.map((supportedLanguage: string) => {
       let value = getLocalizePath(href, supportedLanguage);
@@ -39,7 +39,10 @@ const { showFlag = false, languageMapping, ...attributes } = Astro.props;
       const label = flag + nativeName;
 
       return (
-        <option value={value} selected={supportedLanguage === currentLanguage}>
+        <option
+          value={supportedLanguage === "ko" ? "/" : "/en/"}
+          selected={supportedLanguage === currentLanguage}
+        >
           {label}
         </option>
       );

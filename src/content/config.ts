@@ -21,6 +21,7 @@ const blog = defineCollection({
         .optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
+      language: z.string().default("ko"),
     }),
 });
 

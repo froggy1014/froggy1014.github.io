@@ -15,8 +15,12 @@ changeLanguage("ko");
 
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
-const studyPosts = sortedPosts.filter(({ data }) => data.study);
-const reviewsPosts = sortedPosts.filter(({ data }) => data.reviews);
+const studyPosts = sortedPosts.filter(
+  ({ data }) => data.study && data.language === "ko"
+);
+const reviewsPosts = sortedPosts.filter(
+  ({ data }) => data.reviews && data.language === "ko"
+);
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 

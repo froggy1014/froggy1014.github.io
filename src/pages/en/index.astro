@@ -17,8 +17,12 @@ changeLanguage("en");
 
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
-const studyPosts = sortedPosts.filter(({ data }) => data.study);
-const reviewsPosts = sortedPosts.filter(({ data }) => data.reviews);
+const studyPosts = sortedPosts.filter(
+  ({ data }) => data.study && data.language === i18next.language
+);
+const reviewsPosts = sortedPosts.filter(
+  ({ data }) => data.reviews && data.language === i18next.language
+);
 const socialCount = SOCIALS.filter(social => social.active).length;
 const currentLanguage = i18next.language;
 ---
