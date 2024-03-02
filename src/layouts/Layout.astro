@@ -59,6 +59,11 @@ const supportedLanguages = i18next.languages;
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
+    <!-- https://stackoverflow.com/questions/24851824/how-long-does-it-take-for-github-page-to-show-changes-after-changing-index-html -->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
     <!-- HTML tags to include in your page's <head> section 
       to let search engines know about its language and region variants. 
       To know more, https://developers.google.com/search/docs/specialty/international/localized-versions#html -->
