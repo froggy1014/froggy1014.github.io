@@ -1,7 +1,7 @@
 ---
 author: 프로기
 pubDatetime: 2024-03-03T15:22:00Z
-title: 구름톤 9기 해커톤 후기
+title: 구름톤(9oormthon) 9기 후기
 slug: 9oormthon
 reviews: true
 draft: false
