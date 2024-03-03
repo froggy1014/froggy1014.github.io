@@ -1,5 +1,5 @@
 ---
-author: 프로기
+author: Jeongmin Lee
 pubDatetime: 2024-03-1T15:22:00Z
 title: 제주도에서의 구름톤(9oormthon) 9기 후기
 slug: goormthon
@@ -13,6 +13,7 @@ tags:
   - 제주도
 description: ( Kakao X Goorm ) 구름톤 9기 해커톤 참여한 경험을 담아서 작성한 후기 입니다.
 language: ko
+ogImage: https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F38552da6-340d-42c1-a9a1-b181ff331f03%2Fa6e4652c-35b3-4c24-b394-787975813114%2FArtboard_63.png&blockId=e5a6572a-8a46-4c84-8e11-45d1caf9586e
 ---
 
 <br>
