@@ -1,6 +1,6 @@
 ---
 author: 프로기
-pubDatetime: 2024-03-03T15:22:00Z
+pubDatetime: 2024-03-1T15:22:00Z
 title: 제주도에서의 구름톤(9oormthon) 9기 후기
 slug: goormthon
 reviews: true
@@ -11,7 +11,8 @@ tags:
   - 구름톤
   - 해커톤
   - 제주도
-description: 구름톤 9기 해커톤 참여한 경험을 담아서 작성한 후기 입니다.
+description: ( Kakao X Goorm ) 구름톤 9기 해커톤 참여한 경험을 담아서 작성한 후기 입니다.
+language: ko
 ---
 
 <br>
