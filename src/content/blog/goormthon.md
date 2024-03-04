@@ -50,7 +50,7 @@ ogImage: https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod
 
 ![PR](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FxXZfx%2FbtsFuHeAKRF%2FddADKbRMKSerYn9bI5ky30%2Fimg.jpg)
 
-#### 3. 구글 디자인 시스템 혹은 클램폴린 IDE 실습 교육
+#### 3. 구름 디자인 시스템 혹은 클램폴린 IDE 실습 교육
 
 > 본인은 배포 관련해서 기본지식도 부족하고 들어보고 싶어서 클램폴린 IDE 실습 교육을 택했고, 확실히 나중에 해커톤이 진행되고 배포를 막 하려고할때 도움이 됬었다. 구름톤 참여하기전에 예습을 해오라고 슬랙에 있긴했었는데.. 많은 분들이 (나도포함)해서 하고 온 사람은 거의 없었다.
 
