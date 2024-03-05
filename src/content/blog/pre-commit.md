@@ -13,7 +13,7 @@ tags:
   - prettier
   - git-hooks
   - configuration
-description: 이 가이드는 Husky를 이용한 pre-commit linting 설정과 커스텀한 커밋 컨벤션 적용해보았습니다.
+description: Husky를 이용한 pre-commit linting 설정과 커스텀한 커밋 컨벤션 적용해보았습니다.
 language: ko
 ---
 
