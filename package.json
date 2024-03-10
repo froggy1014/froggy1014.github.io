@@ -55,7 +55,37 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "✨ Feat": {
+          "description": "New features or improvements",
+          "title": "Feature"
+        },
+        "🐛 Fix": {
+          "description": "Bug fixes",
+          "title": "Bug Fix"
+        },
+        "📝 Posting": {
+          "description": "Adding new posts or updating existing ones",
+          "title": "Posting"
+        },
+        "✏️ Edit": {
+          "description": "Corrections for typos and modifications to the content of posts",
+          "title": "Edit"
+        },
+        "🎨 Style": {
+          "description": "Changes in post style and layout, improvements to visual elements",
+          "title": "Style"
+        },
+        "⚙️ Settings": {
+          "description": "Changes to deployment and configuration files",
+          "title": "Settings"
+        },
+        "🔧 Chore": {
+          "description": "Other changes that don't modify source or test files",
+          "title": "Chore"
+        }
+      }
     }
   },
   "lint-staged": {
