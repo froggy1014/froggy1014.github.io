@@ -23,6 +23,10 @@ const studyPosts = sortedPosts.filter(
 const reviewsPosts = sortedPosts.filter(
   ({ data }) => data.reviews && data.language === i18next.language
 );
+
+const troublePosts = sortedPosts.filter(
+  ({ data }) => data.troubleshooting && data.language === i18next.language
+);
 const socialCount = SOCIALS.filter(social => social.active).length;
 const currentLanguage = i18next.language;
 ---
@@ -87,6 +91,29 @@ const currentLanguage = i18next.language;
           <h2>{t("w.reflections")}</h2>
           <ul>
             {reviewsPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={getLocalizePath(
+                      Astro.url.href + `/posts/${slug}/`,
+                      currentLanguage
+                    )}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      troublePosts.length > 0 && (
+        <section id="troubleshooting">
+          <h1>{t("w.troubleshooting")}</h1>
+          <ul>
+            {troublePosts.map(
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
