@@ -111,7 +111,7 @@ const currentLanguage = i18next.language;
     {
       troublePosts.length > 0 && (
         <section id="troubleshooting">
-          <h1>{t("w.troubleshooting")}</h1>
+          <h2>{t("w.troubleshooting")}</h2>
           <ul>
             {troublePosts.map(
               ({ data, slug }, index) =>
@@ -171,12 +171,16 @@ const currentLanguage = i18next.language;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */
+
+  /* ===== Featured & Recent Posts Sections ===== */
   #study,
-  #reviews {
+  #reviews,
+  #troubleshooting {
     @apply pb-6 pt-12;
   }
   #study h2,
-  #reviews h2 {
+  #reviews h2,
+  #troubleshooting h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {

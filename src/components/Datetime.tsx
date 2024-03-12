@@ -1,4 +1,5 @@
 import { LOCALE } from "@config";
+import i18next from "i18next";
 
 interface DatetimesProps {
   pubDatetime: string | Date;
@@ -47,8 +48,12 @@ export default function Datetime({
 
 const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   const myDatetime = new Date(modDatetime ? modDatetime : pubDatetime);
+  const currentLanguage = i18next.language;
 
-  const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
+  const currentLangTag =
+    currentLanguage === "ko" ? LOCALE.langTag : ["en-US", "en"];
+
+  const date = myDatetime.toLocaleDateString(currentLangTag, {
     year: "numeric",
     month: "short",
     day: "numeric",
