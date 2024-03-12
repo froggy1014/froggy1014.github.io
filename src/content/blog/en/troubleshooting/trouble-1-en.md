@@ -1,6 +1,6 @@
 ---
 author: Froggy
-pubDatetime: 2024-03-13T15:22:00Z
+pubDatetime: 2024-03-12T15:22:00Z
 title: Nextjs - not being able to import local vector DB from API route..
 slug: local-vector-en
 troubleshooting: true

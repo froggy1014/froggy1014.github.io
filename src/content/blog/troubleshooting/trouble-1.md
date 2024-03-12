@@ -1,6 +1,6 @@
 ---
 author: 프로기
-pubDatetime: 2024-03-13T15:22:00Z
+pubDatetime: 2024-03-12T15:22:00Z
 title: Nextjs - API route에서 로컬 벡터 DB가 안 가져와지는 건에 대하여..
 slug: local-vector
 troubleshooting: true
