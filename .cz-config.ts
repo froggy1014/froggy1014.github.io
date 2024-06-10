@@ -5,7 +5,9 @@ module.exports = {
     { value: "🐛 typo", name: "🐛 typo:      오타" },
     { value: "📚 docs", name: "📚 docs:      README.md 혹은 문서 업데이트" },
     { value: "👷 cicd", name: "👷 cicd:      CICD 관련 커밋" },
-    { value: "🔨 Settings", name: "🔨 Settings:  세팅 관련 커밋" },
+    { value: "🔨 settings", name: "🔨 Settings:  세팅 관련 커밋" },
+    { value: "💅 styles", name: "💅 styles:    스타일 관련 커밋" },
+    { value: "📦 assets", name: "📦 assets:    아셋 관련 커밋" },
     { value: "✔️ chore", name: "✔️ chore:      마이너한 커밋" },
   ],
 
