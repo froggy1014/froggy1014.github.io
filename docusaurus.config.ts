@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import tailwindPlugin from "./plugins/tailwind-config.cjs"; // add this
 
 const config: Config = {
   title: "My Site",
@@ -28,6 +29,7 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  plugins: [tailwindPlugin],
 
   presets: [
     [

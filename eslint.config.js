@@ -1,15 +1,5 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    commonjs: true,
-    jest: true,
-    node: true,
-  },
   parser: "@babel/eslint-parser",
-  parserOptions: {
-    allowImportExportEverywhere: true,
-  },
   extends: ["airbnb", "prettier"],
   plugins: ["react-hooks", "header"],
   ignorePatterns: [
@@ -18,6 +8,9 @@ module.exports = {
     "node_modules",
     "docs/_static",
     "static",
+    "eslint.config.js",
+    "tailwind.config.js",
+    "plugins"
   ],
   rules: {
     "import/no-unresolved": [
