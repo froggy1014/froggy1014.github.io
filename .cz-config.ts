@@ -11,7 +11,7 @@ module.exports = {
 
   allowCustomScopes: false,
   usePreparedCommit: true,
-  skipQuestions: ["scope", "body"],
+  skipQuestions: ["scope", "body", "footer"],
   isTicketNumberRequired: false,
   ticketNumberPrefix: "ISSUE-",
   ticketNumberRegExp: "\\d{1,5}",
@@ -19,7 +19,6 @@ module.exports = {
   messages: {
     type: "커밋 타입을 골라주세요.\n",
     subject: "제목 작성해주세요.\n",
-    footer: "이슈 번호가 있다면 남겨주세요. E.g.: #1523",
     confirmCommit:
       "마지막으로 한번 확인해주세요. ( 괜찮으면 엔터, 취소는 n, 수정은 e, 도움말 h )",
   },
