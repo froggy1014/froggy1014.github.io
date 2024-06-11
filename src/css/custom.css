@@ -18,7 +18,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -29,7 +29,12 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .highlighted {
+    @apply dark:bg-yellow-200 bg-green-300 px-[4px] py-[2px] rounded-lg dark:text-black text-white;
+  }
+}
