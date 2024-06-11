@@ -1,0 +1,8 @@
+스터디:
+  label: "스터디"
+  permalink: "/study"
+  description: "공부한 내용들을 모아두는 콜렉션입니다."
+
+# An empty tag definition is also valid
+# Other attributes will be inferred from the key
+emptyTag:
