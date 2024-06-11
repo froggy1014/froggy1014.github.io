@@ -6,9 +6,9 @@ import { TProject } from "../HomepageFeatures";
 
 const ProjectCard: FC<TProject> = ({ title, src, description }) => {
   return (
-    <div className="w-auto mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+    <div className="max-w-[360px] md:max-w-none w-auto mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
       <ThemedImage
-        className="w-full h-[300px] sm:h-[180px]"
+        className="w-full h-auto md:h-[300px] sm:h-[180px]"
         alt={title}
         sources={{
           light: useBaseUrl(src),
