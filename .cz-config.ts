@@ -1,7 +1,7 @@
 module.exports = {
   types: [
     { value: "📝 translate", name: "📝 translate: 번역" },
-    { vale: "📄 post", name: "📄 post:      블로그 포스팅" },
+    { value: "📄 post", name: "📄 post:      블로그 포스팅" },
     { value: "🐛 typo", name: "🐛 typo:      오타" },
     { value: "📚 docs", name: "📚 docs:      README.md 혹은 문서 업데이트" },
     { value: "👷 cicd", name: "👷 cicd:      CICD 관련 커밋" },
