@@ -13,6 +13,11 @@
   permalink: "/reading"
   description: "트러블슈팅하고 해당 내용을 모아두는 콜렉션입니다."
 
+프로젝트:
+  label: "프로젝트"
+  permalink: "/project"
+  description: "진행했던 프로젝트 내용을 모아두는 콜렉션입니다."
+
 # An empty tag definition is also valid
 # Other attributes will be inferred from the key
 emptyTag:
