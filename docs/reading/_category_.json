@@ -1,6 +1,6 @@
 {
   "label": "독서",
-  "position": 0,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "서평 혹은 독서한 내용을 정리하는 곳입니다."
