@@ -22,15 +22,15 @@ function HomepageHeader() {
             저는 <span className="highlighted">블리딩 엣지</span>에 서서 새로운
             기술을 배우고 이를 실제 프로젝트에 적용하는 것을 좋아하는
             개발자입니다.
-            <span className="highlighted">대외 활동</span>
+            <span className="highlighted"> 대외 활동</span>
             이나 <span className="highlighted">사이드 프로젝트</span>를 통해
             새로운 지식을 빠르게 습득하고 반복적인 작업을 자동화하는 데 열정을
             가지고 있습니다. 또한, <span className="highlighted">문서화</span>를
             통해 지식을 체계적으로 정리하고 공유하는 것을 좋아하며, 이를 통해
-            팀의 협업을 원활하게 하고 프로젝트의 품질을 향상시키는 데 기여하고
+            팀의 협업을 원활하게 하고 프로젝트의 품질을 향상하는 데 기여하고
             있습니다. 궁극적으로, 지속적으로 학습하고 배운 바를 적용함으로써
-            개발자 경험을 쌓고{" "}
-            <span className="highlighted">사회에 기여하는 개발자</span>로
+            개발자 경험을 쌓고
+            <span className="highlighted"> 사회에 기여하는 개발자</span>로
             성장하고 싶습니다.
           </Heading>
         </div>
