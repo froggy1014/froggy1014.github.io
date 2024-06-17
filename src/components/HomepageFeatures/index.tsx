@@ -28,7 +28,7 @@ const ProjectList: TProject[] = [
     src: "/img/calendar_thumnail.png",
     description:
       "연차 관리 앱으로, 구글 API를 연동하여 엑셀을 대신해 연차 신청과 잔여 연차 관리를 간편하게 할 수 있도록 만들었습니다.",
-    redirectUrl: "",
+    redirectUrl: "/docs/project/2024-12-24-calendar-app",
   },
   {
     title: "인코스 E-commerce",
