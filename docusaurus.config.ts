@@ -1,30 +1,41 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import tailwindPlugin from "./plugins/tailwind-config.cjs"; // add this
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
+
+type TItem = {
+  type: string;
+  id: string;
+};
+
+function reverseBasedOnDate(items: Array<TItem>) {
+  return items.sort((a, b) => {
+    const dateA = a.id.split("/")[1];
+    const dateB = b.id.split("/")[1];
+    return dateB.localeCompare(dateA);
+  });
+}
+
+function reverseSidebarItems(items) {
+  const result = items.map((item) => {
+    if (item.type === "category") {
+      return { ...item, items: reverseBasedOnDate(item.items) };
+    }
+    return item;
+  });
+
+  return result;
+}
 
 const config: Config = {
   title: "Evan (FE)",
-
   favicon: "img/favicon.ico",
-
-  // Set the production url of your site here
   url: "https://froggy1014.github.io",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   projectName: "froggy1014.github.io", // Usually your repo name.
   organizationName: "froggy1014", // Usually your GitHub org/user name.
-
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   plugins: [tailwindPlugin],
 
   presets: [
@@ -35,6 +46,13 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           showLastUpdateTime: true,
           tags: "./tags.yml",
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            return reverseSidebarItems(sidebarItems);
+          },
         },
         blog: {
           showReadingTime: true,
