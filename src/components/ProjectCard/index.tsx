@@ -5,10 +5,15 @@ import ThemedImage from "@theme/ThemedImage";
 import { TProject } from "../HomepageFeatures";
 import Link from "@docusaurus/Link";
 
-const ProjectCard: FC<TProject> = ({ title, src, description }) => {
+const ProjectCard: FC<TProject> = ({
+  title,
+  src,
+  description,
+  redirectUrl,
+}) => {
   return (
     <Link
-      to={`/docs/project/2023-01-06-e-commerce`}
+      to={redirectUrl}
       className="max-w-[360px] md:max-w-none w-auto mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
     >
       <ThemedImage

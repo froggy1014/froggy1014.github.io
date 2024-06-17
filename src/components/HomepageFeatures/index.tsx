@@ -42,7 +42,7 @@ const ProjectList: TProject[] = [
     description:
       "프론트엔드 기능을 시작부터 끝까지 직접 구현해보면서 이해함과 동시에 학습을 목표로 진행하는 E-commerce 서비스 프로젝트입니다.",
     src: "/img/incourse_thumnail.png",
-    redirectUrl: "/docs/project/2023-01-06-e-commerce.mdx",
+    redirectUrl: "/docs/project/2023-01-06-e-commerce",
   },
 ];
 
@@ -57,6 +57,7 @@ export default function HomepageFeatures(): JSX.Element {
               title={props.title}
               src={props.src}
               description={props.description}
+              redirectUrl={props.redirectUrl}
             />
           ))}
         </div>
