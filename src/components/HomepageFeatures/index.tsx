@@ -31,13 +31,6 @@ const ProjectList: TProject[] = [
     redirectUrl: "",
   },
   {
-    title: "The Place I've been",
-    description:
-      "리액트 전체적인 기능 복습과 백엔드 기초적인 부분을 학습을 목표로 MERN 스택을 사용하여 프렌트엔드 개발자를 지원하는 저로써 좀 더 백엔드를 이해하고자 시작하게 되었습니다.",
-    src: "/img/place_thumbnail.png",
-    redirectUrl: "",
-  },
-  {
     title: "인코스 E-commerce",
     description:
       "프론트엔드 기능을 시작부터 끝까지 직접 구현해보면서 이해함과 동시에 학습을 목표로 진행하는 E-commerce 서비스 프로젝트입니다.",
