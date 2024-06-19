@@ -21,14 +21,14 @@ const ProjectList: TProject[] = [
     src: "/img/nailofnail_thumnail.png",
     description:
       "좋아하는 네일 디자인을 저장하고, 링크를 통해 친구와 쉽게 공유하고 사용자는 네일 아트 스타일을 탐색하고, 자신의 컬렉션에 추가하여 언제든지 확인할 수 있는 플랫폼입니다.",
-    redirectUrl: "",
+    redirectUrl: "/docs/project/2024-02-19-tomorrow-nail",
   },
   {
     title: "일정관리 앱",
     src: "/img/calendar_thumnail.png",
     description:
       "연차 관리 앱으로, 구글 API를 연동하여 엑셀을 대신해 연차 신청과 잔여 연차 관리를 간편하게 할 수 있도록 만들었습니다.",
-    redirectUrl: "/docs/project/2024-12-24-calendar-app",
+    redirectUrl: "/docs/project/2023-12-24-calendar-app",
   },
   {
     title: "인코스 E-commerce",
