@@ -5,12 +5,8 @@ import ThemedImage from "@theme/ThemedImage";
 import { TProject } from "../HomepageFeatures";
 import Link from "@docusaurus/Link";
 
-const ProjectCard: FC<TProject> = ({
-  title,
-  src,
-  description,
-  redirectUrl,
-}) => {
+const ProjectCard: FC<TProject> = ({ project }) => {
+  const { redirectUrl, title, src, from, to, description } = project;
   return (
     <Link
       to={redirectUrl}
@@ -28,9 +24,14 @@ const ProjectCard: FC<TProject> = ({
       <div className="px-4">
         <Heading
           as="h4"
-          className="text-lg font-semibold text-zinc-800 dark:text-white mb-0"
+          className="text-lg font-semibold text-zinc-800 dark:text-white mb-0 flex justify-between items-center"
         >
-          {title}
+          <span>{title}</span>
+          <div className="flex gap-1">
+            <span className="text-xs">{from}</span>
+            <span className="text-xs">~</span>
+            <span className="text-xs">{to}</span>
+          </div>
         </Heading>
         <p className="mt-2 text-zinc-600 dark:text-zinc-400 text-sm">
           {description}
