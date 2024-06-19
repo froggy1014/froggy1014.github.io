@@ -4,7 +4,7 @@ import ThemedImage from "@theme/ThemedImage";
 const GithubButton = ({ src }: { src: string }) => {
   return (
     <ThemedImage
-      className="w-[48px] h-[48px] duration-300 hover:scale-110 flex justify-end"
+      className="w-[36px] h-[36px] duration-300 hover:scale-110 flex justify-end mr-4"
       alt={"github"}
       onClick={() => window.open(src, "_blank")}
       sources={{
