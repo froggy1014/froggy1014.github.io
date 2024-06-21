@@ -16,7 +16,7 @@ const ProjectList: TProject[] = [
     src: "/img/swipejeju_thumnail.png",
     description:
       "카카오가 주관한 해커톤에서 관광과 AI를 주제로 자연어를 통해 키워드를 추출하여 맛집, 명소를 스와이프로 쉽게 고르고, 최단 여행 경로를 제공하는 웹앱입니다.",
-    redirectUrl: "",
+    redirectUrl: "/blog/2024/03/01/goormthon",
     from: "24.03",
     to: "24.05",
   },
