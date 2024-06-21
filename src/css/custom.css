@@ -35,6 +35,6 @@
 
 @layer components {
   .highlighted {
-    @apply dark:bg-yellow-200 bg-green-500 px-[4px] py-[2px] rounded-lg dark:text-black text-white;
+    @apply dark:bg-yellow-200 bg-green-500 px-[6px] py-[2px] rounded-lg dark:text-black text-white text-center;
   }
 }
