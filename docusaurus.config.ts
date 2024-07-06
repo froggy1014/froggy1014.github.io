@@ -63,8 +63,13 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
+    metadata: [
+      {
+        name: "google-site-verification",
+        content: "jyGDXJ29gIqX2cQC8u2gfMH24MpxDk8ROAx9QPWNLoY",
+      },
+    ],
     navbar: {
       title: "Evan",
       items: [
