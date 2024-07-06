@@ -9,6 +9,7 @@ module.exports = {
     { value: "💅 styles", name: "💅 styles:    스타일 관련 커밋" },
     { value: "📦 assets", name: "📦 assets:    아셋 관련 커밋" },
     { value: "✔️ chore", name: "✔️ chore:      마이너한 커밋" },
+    { value: "🔎 SEO", name: "🔎 SEO:      SEO 최적화 관련" },
   ],
 
   allowCustomScopes: false,
