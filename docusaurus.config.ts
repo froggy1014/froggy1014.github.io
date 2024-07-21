@@ -81,6 +81,25 @@ const config: Config = {
         name: "google-site-verification",
         content: "jyGDXJ29gIqX2cQC8u2gfMH24MpxDk8ROAx9QPWNLoY",
       },
+      {
+        name: "keywords",
+        content:
+          "프론트엔드 개발자, 이정민, 에반, 블리딩 엣지, 새로운 기술, 대외 활동, 사이드 프로젝트, 자동화, 문서화, 협업, 프로젝트 품질, 지속적 학습, 개발자 경험, 사회 기여, 개발자 성장",
+      },
+      {
+        name: "description",
+        content:
+          "안녕하세요. 프론트엔드 개발자 이정민입니다. 새로운 기술을 배우고 이를 실제 프로젝트에 적용하는 것을 좋아하며, 대외 활동과 사이드 프로젝트를 통해 빠르게 지식을 습득하고 반복적인 작업을 자동화하는 데 열정을 가지고 있습니다. 문서화를 통해 팀 협업을 원활하게 하고 프로젝트 품질을 향상하는 데 기여하고 있으며, 지속적으로 학습하고 배운 바를 적용함으로써 개발자 경험을 쌓고 사회에 기여하는 개발자로 성장하고 싶습니다.",
+      },
+    ],
+    headTags: [
+      {
+        tagName: "link",
+        attributes: {
+          rel: "preconnect",
+          href: "https://froggy1014.github.io",
+        },
+      },
     ],
     navbar: {
       title: "Evan",
