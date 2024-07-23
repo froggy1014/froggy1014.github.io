@@ -50,7 +50,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Junior front-end developer"
+      description="블리딩엣지에 서서 꾸준한 페이스로 완주까지 하고 싶은 개발자입니다."
     >
       <HomepageHeader />
       <main>

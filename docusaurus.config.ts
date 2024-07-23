@@ -28,7 +28,7 @@ function reverseSidebarItems(items) {
 }
 
 const config: Config = {
-  title: "Evan (FE)",
+  title: "프로기네",
   favicon: "img/favicon.ico",
   url: "https://froggy1014.github.io",
   baseUrl: "/",
