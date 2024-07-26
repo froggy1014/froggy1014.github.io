@@ -17,7 +17,7 @@ function HomepageHeader() {
           />
         </div>
         <div className="flex flex-col items-start pt-[20px] max-w-[100%] md:max-w-[80%]">
-          <Heading as="h3" className="break-words">
+          <Heading as="h1" className="break-words text-lg">
             안녕하세요. 프론트엔드 개발자 이정민입니다.
           </Heading>
           <Heading as="h5" className="text-start leading-6 break-words">
