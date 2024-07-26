@@ -107,7 +107,7 @@ const config: Config = {
         },
         innerHTML: JSON.stringify({
           "@context": "https://froggy1014.github.io/",
-          "@type": "Blog",
+          "@type": "Organization",
           name: "프론트엔드 개발자 이정민 개발블로그",
           url: "https://froggy1014.github.io/",
           logo: "https://avatars.githubusercontent.com/u/76844856?v=4",
