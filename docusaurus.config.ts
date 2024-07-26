@@ -100,6 +100,19 @@ const config: Config = {
           href: "https://froggy1014.github.io",
         },
       },
+      {
+        tagName: "script",
+        attributes: {
+          type: "application/ld+json",
+        },
+        innerHTML: JSON.stringify({
+          "@context": "https://froggy1014.github.io/",
+          "@type": "Blog",
+          name: "프론트엔드 개발자 이정민 개발블로그",
+          url: "https://froggy1014.github.io/",
+          logo: "https://avatars.githubusercontent.com/u/76844856?v=4",
+        }),
+      },
     ],
     navbar: {
       title: "Evan",
