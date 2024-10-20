@@ -39,7 +39,7 @@ function HomepageHeader() {
               Github
             </Link>
             <Link
-              href="www.linkedin.com/in/jeongmin-lee-617a4a145"
+              href="https://www.linkedin.com/in/jeongmin-lee-617a4a145"
               className="font-semibold"
             >
               LinkedIn
