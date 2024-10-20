@@ -76,6 +76,9 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: "light",
+    },
     metadata: [
       {
         name: "google-site-verification",
