@@ -1,13 +1,14 @@
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
+import { useEffect, useRef } from "react";
+import CursorRadialGradient from "../components/CursorRadialGradient";
 
 function HomepageHeader() {
   return (
     <header
-      className={`p-4 lg:p-8 text-center relative overflow-hidden h-screen flex justify-center items-center`}
+      className={`p-4 lg:p-8 text-center relative overflow-hidden h-screen flex justify-center items-center top-0 left-0`}
     >
       <div className="container flex flex-col md:flex-row items-center gap-4">
         <img
@@ -59,21 +60,20 @@ function HomepageHeader() {
           </div>
         </div>
       </div>
+      <CursorRadialGradient />
     </header>
   );
 }
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="블리딩엣지에 서서 꾸준한 페이스로 완주까지 하고 싶은 개발자입니다."
     >
       <HomepageHeader />
-      {/* <main>
-        <HomepageFeatures />
-      </main> */}
     </Layout>
   );
 }
