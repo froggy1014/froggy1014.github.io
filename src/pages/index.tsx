@@ -2,7 +2,6 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
-import { useEffect, useRef } from "react";
 import CursorRadialGradient from "../components/CursorRadialGradient";
 
 function HomepageHeader() {
@@ -20,11 +19,11 @@ function HomepageHeader() {
         />
 
         <div className="flex flex-col items-start justify-center">
-          <Heading as="h1" className="break-words">
+          <Heading as="h1" className="break-words text-[20px] md:text-[28px]">
             프론트엔드 개발자{" "}
             <span className="text-[--ifm-color-primary]">이정민</span>입니다.
           </Heading>
-          <p className="text-lg text-start">
+          <p className="text-[14px] md:text-[20px] text-start">
             안녕하세요. 어디에서나 잘 녹아드는 2년차 프론트엔드 이정민이라고
             합니다. 사내 프로젝트 전반에 걸쳐 사용하면서 숙련도를 늘려가고
             있습니다. 새로운 인사이트 얻으면서 한 도메인에 묶여있지 않기 위해
