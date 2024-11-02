@@ -1,0 +1,134 @@
+---
+title: 프론트엔드 성능 최적화 가이드
+description: 데보션 OpenLab 스터디를 통해 각 챕터별로 알게된 점과 후기를 적어봅니다.
+tags: [독서]
+last_update:
+  date: 11/03/2024
+---
+
+# 목차
+
+- 블로그 서비스 최적화
+- 올림픽 통계 서비스 최적화
+- 홈페이지 최적화
+- 이미지 갤러리 최적화
+
+# 머릿말
+
+> 이번에 처음으로 데보션 오픈랩 스터디에 참여하면서, 이 교재를 가지고 스터디를 진행하였고, 알게된 점과 전반적인 내용을 정리해보려고합니다.
+
+![book](https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788966263745.jpg)
+
+## 1️⃣ 블로그 서비스 최적화
+
+![service](https://i.ibb.co/L6qJC1H/Screenshot-2024-11-03-at-3-54-01-AM.png)
+
+> 첫번째 장은 아티클 리스트와 아티클 상세페이지로 이루어져있는 작은 블로그를 통해 실습을 진행합니다.
+
+### 라이트하우스 ( lighthouse )
+
+> 구글에서 개발한, 웹 페이지의 품질을 개선할 수 있는 오픈 소스 형태의 자동화 도구 <br />
+> 현업에서도 제일 많이 쓰이고 프론트엔드 개발자라면 자주 접하는 라이트하우스를 통해 부족한 최적화를 진행합니다.
+
+![lighthouse](https://i.ibb.co/8xbQYQp/Screenshot-2024-11-03-at-4-03-01-AM.png)
+
+고의적으로 최적화가 필요하도록 설계된 블로그이다 보니 아래와 같은 문제들이 있었습니다.
+
+#### Properly size images
+
+실제롷 가져오는 이미지와 리스트에서 사용되는 이미지 사이즈가 많이 상이하기 때문에 발생합니다.
+이 프로젝트에서는 1200*1200px 사이즈의 사진들을 전부 240*240px로 고정이 되어있는 이미지로 사용되고 있습니다.
+
+제일 먼저 떠오르는건 이미지 사이즈 자체를 맞게 수정해서 스토어해놓는 것이겠지만,
+대부분의 이미지는 CDN을 통해 제공되기 때문에 그건 힘들 수 있습니다.
+여기 실습에서는 [`unsplash`](https://unsplash.com/)라는 이미지 CDN 무료로 제공해주는
+서비스를 통해 서빙되고 있습니다. 그리고 대부분의 이미지 CDN이 그렇듯 사이즈가 조절이 가능한 파라미터를 지원하기 때문에
+이 예시에서는 아래와 같이 이미지를 가져옴으로써 해결했습니다.
+
+`https://images.unsplash.com/photo-345?q=80&w=240&h=240`
+
+TMI: 저희 회사에서는 [imageKit](https://imagekit.io/features/automatic-image-optimization/)이라는 서비스를 사용해서 최적화를 진행하고 있습니다.
+
+:::info
+
+**이미지 CDN이란 ?** <br />
+전 세계에 분산된 서버를 통해 사용자가 가장 가까운 서버에서 이미지를 받아 빠르고 효율적으로 로딩되도록 돕는 네트워크
+
+:::
+
+#### 병목 코드
+
+Performance tab을 켜서 확인해보면 단순히 렌더링임에도 불구하고 1.4초 이상 걸리는 구간을 확인할 수 있습니다.
+좀 더 자세히보면 해당 렌더링때 발생하는 함수이름을 알 수 있는데, 그거를 단서로 해당 함수의 로직을 보면 의도적으로 특수문자를 제거하는 함수가 비효율적으로 작성되어 있습니다.
+
+자세히 읽어보면 `removeSpecialCharacter` 함수가 계속해서 반복된는데. 이는 일부러 굉장히 잘못된 로직으로 구성된 함수입니다.
+
+코드를 리팩토링 함으로써 성능을 비약적으로 개선하는 그 과정을 체험할 수 있었습니다.
+
+|                                   최적화 전                                    |                                   최적화 후                                    |
+| :----------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| ![최적화 전](https://i.ibb.co/9pbZJzM/Screenshot-2024-11-03-at-5-38-14-AM.png) | ![최적화 후](https://i.ibb.co/r2W8WJV/Screenshot-2024-11-03-at-5-37-07-AM.png) |
+
+#### Code split && lazy loading
+
+처음 렌더링할때, 처음에 FCP 걸리는 걸 확인 할 수 있습니다. 로컬 서버에 단순한 서비스임에도 불구하구요. 라이트하우스에서 위와 같은 경고가 있는데 트레이싱해서 그 청크파일을 확인해보면 한 청크파일이 4MB가 넘는걸 알 수 있습니다.
+
+이때 `webpack-bundle-analyzer` 패키지를 이용해서 번들파일의 구성을 쉽게 확인 가능합니다.
+
+![번들](https://i.ibb.co/GCgqvhZ/Screenshot-2024-11-03-at-5-51-26-AM.png)
+
+실습코드는 lazy loading이나 코드 스플릿 같은게 하나도 적용이 안되어 있기때문에 위처럼 하나의 청크로 다 묶여있는 것을 볼 수 있습니다. 그렇기 때문에 분리할 수 있는 코드는 하나의 다른 모듈로 분류하여 컴포넌트화를 진행하고, 모달 혹은 라우트에 사용되는 컴포넌트 같은 경우는 동적으로 가져올 수 있으므로, react에서 지원하는 `lazy`, `Suspense`를 사용해서 청크를 여러개로 나누는 작업을 했습니다.
+
+간단하게 코드를 추상화하면 아래와 같습니다.
+
+```jsx
+// 전
+import React from "react";
+import LargeComponent from "./LargeComponent";
+
+function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      <LargeComponent />
+    </div>
+  );
+}
+
+export default App;
+```
+
+```jsx
+// 후
+import React, { Suspense } from "react";
+
+const LazyLargeComponent = React.lazy(() => import("./LargeComponent"));
+
+function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyLargeComponent />
+      </Suspense>
+    </div>
+  );
+}
+
+export default App;
+```
+
+#### enable text compression
+
+HTML, CSS, Javascript와 같은 리소스는 전부 텍스트 압축이 가능합니다.
+
+네트워크 응답 헤더를 확인해보면 `Content-Encoding`에 `gzip`이 들어가 있는데 메인 번들 파일의 응답헤더를 보면 `Content-Encoding`이 비어져 있는 것을 알 수 있습니다.
+
+이또한 이 프로젝트에서 일부러 해당 조건을 disabled 처리해 놓았어서 플래그를 풀어서 해결 할 수 있었습니다.
+
+:::info
+
+**텍스트 압축이란 ?** <br />
+HTML, CSS, JavaScript 등 텍스트 기반 파일의 크기를 줄여 웹 페이지 로딩 속도를 높이는 최적화 기법입니다.
+
+:::
