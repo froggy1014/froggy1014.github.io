@@ -111,11 +111,38 @@ const config: Config = {
           type: "application/ld+json",
         },
         innerHTML: JSON.stringify({
-          "@context": "https://froggy1014.github.io/",
-          "@type": "Organization",
-          name: "프론트엔드 개발자 이정민 개발블로그",
-          url: "https://froggy1014.github.io/",
-          logo: "https://avatars.githubusercontent.com/u/76844856?v=4",
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "이정민(Evan)",
+          url: "https://froggy1014.github.io",
+          sameAs: [
+            "https://github.com/froggy1014",
+            // 다른 소셜 미디어 링크들
+          ],
+          jobTitle: "Frontend Developer",
+          worksFor: {
+            "@type": "Organization",
+            name: "Your Company",
+          },
+        }),
+      },
+      {
+        tagName: "script",
+        attributes: {
+          type: "application/ld+json",
+        },
+        innerHTML: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          url: "https://froggy1014.github.io",
+          name: "프로기네",
+          description: "프론트엔드 개발자 이정민의 기술 블로그",
+          potentialAction: {
+            "@type": "SearchAction",
+            target:
+              "https://froggy1014.github.io/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
         }),
       },
     ],
@@ -124,7 +151,7 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "docSidebar",
           position: "left",
           label: "블로그",
         },
@@ -136,6 +163,17 @@ const config: Config = {
         },
       ],
     },
+    i18n: {
+      defaultLocale: "ko",
+      locales: ["ko"],
+    },
+    stylesheets: [
+      {
+        href: "https://fonts.googleapis.com/css2?family=Your+Font&display=swap",
+        type: "text/css",
+        crossorigin: "anonymous",
+      },
+    ],
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

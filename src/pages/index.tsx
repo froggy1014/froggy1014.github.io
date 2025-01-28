@@ -44,18 +44,6 @@ function HomepageHeader() {
             >
               LinkedIn
             </Link>
-            <Link
-              href="https://www.rallit.com/hub/resumes/40139"
-              className="font-semibold"
-            >
-              Resume
-            </Link>
-            <Link
-              href="https://froggy1014.github.io/docs/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"
-              className="font-semibold"
-            >
-              Project
-            </Link>
           </div>
         </div>
       </div>

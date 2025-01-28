@@ -17,6 +17,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/side':
+        specifier: ^0.2.2
+        version: 0.2.2(@testing-library/dom@10.4.0)(@types/react@18.3.3)(react@18.3.1)
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
@@ -1142,6 +1145,24 @@ packages:
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
 
+  '@radix-ui/react-compose-refs@1.1.1':
+    resolution: {integrity: sha512-Y9VzoRDSJtgFMUCoiZBDVo084VQ5hfpXxVE+NgkdNsjiDBByiImMZKKhxMwCbdHvhlENG6a833CbFkOQvTricw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@radix-ui/react-slot@1.1.1':
+    resolution: {integrity: sha512-RApLLOcINYJA+dMVbOju7MYv1Mb2EBp2nH4HdDzXTSyaR5optlm6Otrz1euW3HbdOR8UmmFK06TD+A9frYWv+g==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
 
@@ -1161,6 +1182,69 @@ packages:
   '@sindresorhus/is@5.6.0':
     resolution: {integrity: sha512-TV7t8GKYaJWsn00tFDqBw8+Uqmr8A0fRU1tvTQhyZzGv0sJCGRQL3JGMI3ucuKo3XIZdUP+Lx7/gh2t3lewy7g==}
     engines: {node: '>=14.16'}
+
+  '@sipe-team/badge@0.0.3':
+    resolution: {integrity: sha512-asVTkiWzu93iEMODdCF8ZbDbJenNZeBl11/na4JemoUMst4BmYkpMbI52PocgcGqSzcZAA5ythCeFIizf/F2vQ==, tarball: https://npm.pkg.github.com/download/@sipe-team/badge/0.0.3/8e49cec0e392b1eeb8df009d162d4905f25a9e15}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/button@0.0.1':
+    resolution: {integrity: sha512-9LL4T89XNuHN8EEzwmpG+jf3GUCaJLPf3SDh7dA/L4G9gZs0BnuXBklMj15d+EXoLKgK7mBeHTrVoB8sUHq1Xw==, tarball: https://npm.pkg.github.com/download/@sipe-team/button/0.0.1/54564e96715138be582992dcebbfc4bbbb29a62d}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/card@0.1.0':
+    resolution: {integrity: sha512-yoC/x86UWZPpe/x4a+qRWX0ywQlkiQhzIcuUa1o5IlS4Yhvw3gVT1iHI62iCpY90dGesEbi/4tkoAqALzIIFeg==, tarball: https://npm.pkg.github.com/download/@sipe-team/card/0.1.0/ea64fb79a758896f88d71ab88ca7bc30f771e378}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/divider@0.0.2':
+    resolution: {integrity: sha512-c9uZln6wemw19u7d7PoxtsbghgszogNmNpNkZ8Ehc72QIggZAoq7v+cgFE93W15JhROE8SGz9hZala7WsydLxQ==, tarball: https://npm.pkg.github.com/download/@sipe-team/divider/0.0.2/e233f5bf2c33e4b233fb8f477232b54ed602a351}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/flex@0.1.1':
+    resolution: {integrity: sha512-gSLohDsWdNP+P6L/rLbuyGDC7kpGYulDmx+Riv0Tqct7Tkw5wg/aIZjp0HrHGjo7z8WdmqmyTsuLQXbMR5zTVA==, tarball: https://npm.pkg.github.com/download/@sipe-team/flex/0.1.1/24d2e98283c72bf1c8df6396532b78ae4f3bafa5}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/input@0.0.3':
+    resolution: {integrity: sha512-9aXbsH84FpPD6U81haVJvCn2R1TUf7+aGttgs08SYmO+uNlHs2gIfPB8NaDdG7SIgCn7o5dxtHvnqRO8kuA2uA==, tarball: https://npm.pkg.github.com/download/@sipe-team/input/0.0.3/5a2fbe9ee9b2d7414f72745127645c85fafc0c87}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/radio-group@0.0.2':
+    resolution: {integrity: sha512-OrtqYoPyvkUXnPx2dKUpHnxlvFnn7tV7trL6vObWtUlv3gdcjgViP3ckqzWGZoKs9sPRyBz46rrmjCmnWsFrQA==, tarball: https://npm.pkg.github.com/download/@sipe-team/radio-group/0.0.2/d407ef1092a4a002e320471a662bd7d3895e149a}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/side@0.2.2':
+    resolution: {integrity: sha512-9I0ntdWiBd1hyvRFnXLR1+PELgR3gQCJMQfLevj2uTvNQm5SYcqewtwzYsRbvKuEsBlocyDR+BKHG6AUEOpTPQ==, tarball: https://npm.pkg.github.com/download/@sipe-team/side/0.2.2/05a74610efd9de59c71e5b027f6e3deee21049c9}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/skeleton@0.0.2':
+    resolution: {integrity: sha512-NaHJ6uirEsJRySNDcQl9jdbRZp7RkQOpVMBIBWV8jUgoRoKngvo9admvHpc3xDclT5I3OBaZZN7S4zolOtkEVA==, tarball: https://npm.pkg.github.com/download/@sipe-team/skeleton/0.0.2/e9a73748c769a2f289b80afad3c9e201f5043cbc}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/switch@0.0.2':
+    resolution: {integrity: sha512-VUlM6xP6qQJ1eefuRPYKhQr7bDnepTNzzxtoDGkJuptPhYtWo4iQhzvBIz6frZbfDhykz/tbfV1CDF7TfkLBGw==, tarball: https://npm.pkg.github.com/download/@sipe-team/switch/0.0.2/64f419f325de714ff2ef4aeaa791fef7e0f54268}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/tokens@0.1.0':
+    resolution: {integrity: sha512-ZrR6S1sigyemBpmU4eTkPW6tvjg/aRlk8NvPun2yNzz0FnKLCcXoTg1RujUPdTjn1U/t+i6WiDshUkAegHG/0g==, tarball: https://npm.pkg.github.com/download/@sipe-team/tokens/0.1.0/04d76be75e09b4ac26971f4c39916b3556e3859e}
+
+  '@sipe-team/tooltip@0.0.3':
+    resolution: {integrity: sha512-Aq4zENR35SNdRhwV3KsDnR+grGy3K4RmGRmCdNSx2cycSXsuE3bYPMhwhe7NCkd+iHDGHX2ftm/Qf9346HwOAA==, tarball: https://npm.pkg.github.com/download/@sipe-team/tooltip/0.0.3/fd475b1f50c2f6b40509ba9c7c9c503ce7538438}
+    peerDependencies:
+      react: '>= 18'
+
+  '@sipe-team/typography@0.0.4':
+    resolution: {integrity: sha512-ekRdtnNsWyuzc+dre/IapqgPHT2vAJOaIE7evfXiw8oV3n8M/fnoLWZs7XdTto29TnH3p6KJMIAd/AusQ6WziA==, tarball: https://npm.pkg.github.com/download/@sipe-team/typography/0.0.4/0cde48675629643c2bd1703e3326507136cf451c}
+    peerDependencies:
+      react: '>= 18'
 
   '@slorber/remark-comment@1.0.0':
     resolution: {integrity: sha512-RCE24n7jsOj1M0UPvIQCHTe7fI0sFL4S2nwKVWwHyVr/wI/H8GosgsJGyhnsZoGFnD/P2hLf1mSbrrgSLN93NA==}
@@ -1247,12 +1331,25 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
+  '@testing-library/dom@10.4.0':
+    resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
+    engines: {node: '>=18'}
+
+  '@testing-library/user-event@14.6.1':
+    resolution: {integrity: sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
+
+  '@types/aria-query@5.0.4':
+    resolution: {integrity: sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==}
 
   '@types/body-parser@1.19.5':
     resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
@@ -1361,6 +1458,11 @@ packages:
 
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
+
+  '@types/react-dom@18.3.5':
+    resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
+    peerDependencies:
+      '@types/react': ^18.0.0
 
   '@types/react-router-config@5.0.11':
     resolution: {integrity: sha512-WmSAg7WgqW7m4x8Mt4N6ZyKz0BubSj/2tVUMsAHp+Yd2AMwcSbeFq9WympT19p5heCFmF97R9eD5uUR/t4HEqw==}
@@ -1567,6 +1669,10 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ansi-styles@5.2.0:
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    engines: {node: '>=10'}
 
   ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
@@ -1849,6 +1955,9 @@ packages:
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
     engines: {node: '>=8'}
+
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
 
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
@@ -2335,6 +2444,9 @@ packages:
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
+
+  dom-accessibility-api@0.5.16:
+    resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
 
   dom-converter@0.2.0:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
@@ -3712,6 +3824,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lz-string@1.5.0:
+    resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
+    hasBin: true
+
   markdown-extensions@2.0.0:
     resolution: {integrity: sha512-o5vL7aDWatOTX8LzaS1WMoaoxIiLRQJuIKKe2wAw6IeULDHaqbiqiggmx+pKvZDb1Sj+pE46Sn1T7lCqfFtg1Q==}
     engines: {node: '>=16'}
@@ -4612,6 +4728,10 @@ packages:
   pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
 
+  pretty-format@27.5.1:
+    resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
+
   pretty-time@1.1.0:
     resolution: {integrity: sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==}
     engines: {node: '>=4'}
@@ -4723,6 +4843,9 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-is@17.0.2:
+    resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
 
   react-json-view-lite@1.4.0:
     resolution: {integrity: sha512-wh6F6uJyYAmQ4fK0e8dSQMEWuvTs2Wr3el3sLD9bambX1+pSWUVXIz1RFaoy3TI1mZ0FqdpKq9YgbgTTgyrmXA==}
@@ -5387,6 +5510,9 @@ packages:
 
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+
+  ts-pattern@5.6.2:
+    resolution: {integrity: sha512-d4IxJUXROL5NCa3amvMg6VQW2HVtZYmUTPfvVtO7zJWGYLJ+mry9v2OmYm+z67aniQoQ8/yFNadiEwtNS9qQiw==}
 
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
@@ -7595,6 +7721,19 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
+  '@radix-ui/react-compose-refs@1.1.1(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+    optionalDependencies:
+      '@types/react': 18.3.3
+
+  '@radix-ui/react-slot@1.1.1(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      react: 18.3.1
+    optionalDependencies:
+      '@types/react': 18.3.3
+
   '@sideway/address@4.1.5':
     dependencies:
       '@hapi/hoek': 9.3.0
@@ -7608,6 +7747,113 @@ snapshots:
   '@sindresorhus/is@4.6.0': {}
 
   '@sindresorhus/is@5.6.0': {}
+
+  '@sipe-team/badge@0.0.3(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@sipe-team/typography': 0.0.4(@types/react@18.3.3)(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/button@0.0.1(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/typography': 0.0.4(@types/react@18.3.3)(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+      ts-pattern: 5.6.2
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/card@0.1.0(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/tokens': 0.1.0
+      clsx: 2.1.1
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/divider@0.0.2(react@18.3.1)':
+    dependencies:
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@sipe-team/flex@0.1.1(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/input@0.0.3(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      classnames: 2.5.1
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/radio-group@0.0.2(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
+  '@sipe-team/side@0.2.2(@testing-library/dom@10.4.0)(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@sipe-team/badge': 0.0.3(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/button': 0.0.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/card': 0.1.0(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/divider': 0.0.2(react@18.3.1)
+      '@sipe-team/flex': 0.1.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/input': 0.0.3(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/radio-group': 0.0.2(react@18.3.1)
+      '@sipe-team/skeleton': 0.0.2(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/switch': 0.0.2(react@18.3.1)
+      '@sipe-team/tokens': 0.1.0
+      '@sipe-team/tooltip': 0.0.3(@testing-library/dom@10.4.0)(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/typography': 0.0.4(@types/react@18.3.3)(react@18.3.1)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@testing-library/dom'
+      - '@types/react'
+
+  '@sipe-team/skeleton@0.0.2(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+
+  '@sipe-team/switch@0.0.2(react@18.3.1)':
+    dependencies:
+      '@sipe-team/tokens': 0.1.0
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@sipe-team/tokens@0.1.0': {}
+
+  '@sipe-team/tooltip@0.0.3(@testing-library/dom@10.4.0)(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.0)
+      '@types/react-dom': 18.3.5(@types/react@18.3.3)
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - '@testing-library/dom'
+      - '@types/react'
+
+  '@sipe-team/typography@0.0.4(@types/react@18.3.3)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.3)(react@18.3.1)
+      '@sipe-team/tokens': 0.1.0
+      clsx: 2.1.1
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@slorber/remark-comment@1.0.0':
     dependencies:
@@ -7712,11 +7958,28 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
+  '@testing-library/dom@10.4.0':
+    dependencies:
+      '@babel/code-frame': 7.24.7
+      '@babel/runtime': 7.24.7
+      '@types/aria-query': 5.0.4
+      aria-query: 5.3.0
+      chalk: 4.1.2
+      dom-accessibility-api: 0.5.16
+      lz-string: 1.5.0
+      pretty-format: 27.5.1
+
+  '@testing-library/user-event@14.6.1(@testing-library/dom@10.4.0)':
+    dependencies:
+      '@testing-library/dom': 10.4.0
+
   '@trysound/sax@0.2.0': {}
 
   '@types/acorn@4.0.6':
     dependencies:
       '@types/estree': 1.0.5
+
+  '@types/aria-query@5.0.4': {}
 
   '@types/body-parser@1.19.5':
     dependencies:
@@ -7836,6 +8099,10 @@ snapshots:
   '@types/qs@6.9.15': {}
 
   '@types/range-parser@1.2.7': {}
+
+  '@types/react-dom@18.3.5(@types/react@18.3.3)':
+    dependencies:
+      '@types/react': 18.3.3
 
   '@types/react-router-config@5.0.11':
     dependencies:
@@ -8083,6 +8350,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ansi-styles@5.2.0: {}
 
   ansi-styles@6.2.1: {}
 
@@ -8442,6 +8711,8 @@ snapshots:
   chrome-trace-event@1.0.4: {}
 
   ci-info@3.9.0: {}
+
+  classnames@2.5.1: {}
 
   clean-css@5.3.3:
     dependencies:
@@ -8943,6 +9214,8 @@ snapshots:
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
+
+  dom-accessibility-api@0.5.16: {}
 
   dom-converter@0.2.0:
     dependencies:
@@ -10561,6 +10834,8 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  lz-string@1.5.0: {}
+
   markdown-extensions@2.0.0: {}
 
   markdown-table@3.0.3: {}
@@ -11693,6 +11968,12 @@ snapshots:
       lodash: 4.17.21
       renderkid: 3.0.0
 
+  pretty-format@27.5.1:
+    dependencies:
+      ansi-regex: 5.0.1
+      ansi-styles: 5.2.0
+      react-is: 17.0.2
+
   pretty-time@1.1.0: {}
 
   prism-react-renderer@2.3.1(react@18.3.1):
@@ -11829,6 +12110,8 @@ snapshots:
       shallowequal: 1.1.0
 
   react-is@16.13.1: {}
+
+  react-is@17.0.2: {}
 
   react-json-view-lite@1.4.0(react@18.3.1):
     dependencies:
@@ -12642,6 +12925,8 @@ snapshots:
   trough@2.2.0: {}
 
   ts-interface-checker@0.1.13: {}
+
+  ts-pattern@5.6.2: {}
 
   tsconfig-paths@3.15.0:
     dependencies:
