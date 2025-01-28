@@ -38,6 +38,6 @@ export default tseslint.config(
 
   // ignore files
   {
-    ignores: ["**/*/dist/", "**/node_modules/", "*.config.*"],
+    ignores: ["**/*/dist/", "**/node_modules/", "*.config.*", "plugins"],
   },
 );
