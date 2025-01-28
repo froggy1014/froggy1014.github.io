@@ -1,14 +1,7 @@
-# Check if the commit is being made by Commitizen
-if [ -z "$CZ_IN_PROGRESS" ]; then
-  # Set an environment variable to indicate Commitizen is running
-  export CZ_IN_PROGRESS=true
-
-  # Run Commitizen
-  exec < /dev/tty && npx cz-cust
-
-  # Unset the environment variable
-  unset CZ_IN_PROGRESS
-fi
-
-# Allow the commit to proceed
-true
+# git commit -m 명령어를 사용할 때는 스킵
+if [ -z "${2}" ]; then
+  exec < /dev/tty && pnpm cz --hook || {
+    echo "\nCommit has been cancelled."
+    exit 1
+  }
+fi 
