@@ -56,8 +56,9 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
-          postsPerPage: "ALL",
+          postsPerPage: 1,
           blogSidebarCount: "ALL",
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -150,7 +151,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "docSidebar",
           position: "left",
-          label: "블로그",
+          label: "포스팅",
         },
         { to: "/blog", label: "회고", position: "left" },
         {
