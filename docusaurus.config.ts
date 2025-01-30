@@ -79,6 +79,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    image: "https://avatars.githubusercontent.com/u/76844856?v=4",
     colorMode: {
       defaultMode: "dark",
     },
@@ -120,7 +121,7 @@ const config: Config = {
           jobTitle: "Frontend Developer",
           worksFor: {
             "@type": "Organization",
-            name: "Your Company",
+            name: "CloudHospital",
           },
         }),
       },
