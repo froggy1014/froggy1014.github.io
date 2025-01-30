@@ -46,8 +46,6 @@
       "Segoe UI Symbol";
     --menu-link-active: rgba(0, 0, 0, 0.1);
     --ifm-menu-link-padding-vertical: 0.5rem;
-    --docs-fg-base: #030712;
-    --ifm-menu-color-active: var(--docs-fg-base);
 
     /* Docsearch color */
     --docsearch-key-gradient: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
