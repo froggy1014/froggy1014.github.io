@@ -17,6 +17,12 @@ importers:
       '@docusaurus/preset-classic':
         specifier: 3.7.0
         version: 3.7.0(@algolia/client-search@5.20.0)(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(@types/react@18.3.3)(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(search-insights@2.14.0)(typescript@5.6.3)
+      '@docusaurus/theme-common':
+        specifier: ^3.7.0
+        version: 3.7.0(@docusaurus/plugin-content-docs@3.7.0(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.6.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@giscus/react':
+        specifier: ^3.1.0
+        version: 3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mdx-js/react':
         specifier: ^3.0.1
         version: 3.0.1(@types/react@18.3.3)(react@19.0.0)
@@ -2076,6 +2082,12 @@ packages:
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@giscus/react@3.1.0':
+    resolution: {integrity: sha512-0TCO2TvL43+oOdyVVGHDItwxD1UMKP2ZYpT6gXmhFOqfAJtZxTzJ9hkn34iAF/b6YzyJ4Um89QIt9z/ajmAEeg==}
+    peerDependencies:
+      react: ^16 || ^17 || ^18 || ^19
+      react-dom: ^16 || ^17 || ^18 || ^19
+
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
 
@@ -2143,6 +2155,12 @@ packages:
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
+
+  '@lit-labs/ssr-dom-shim@1.3.0':
+    resolution: {integrity: sha512-nQIWonJ6eFAvUUrSlwyHDm/aE8PBDu5kRpL0vHMg6K8fK3Diq1xdPjTnsJSwxABhaZ+5eBi1btQB5ShUTKo4nQ==}
+
+  '@lit/reactive-element@2.0.4':
+    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
 
   '@mdx-js/mdx@3.0.1':
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
@@ -2455,6 +2473,9 @@ packages:
 
   '@types/sockjs@0.3.36':
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
+
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@2.0.10':
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -4130,6 +4151,9 @@ packages:
   get-tsconfig@4.10.0:
     resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
 
+  giscus@1.6.0:
+    resolution: {integrity: sha512-Zrsi8r4t1LVW950keaWcsURuZUQwUaMKjvJgTCY125vkW6OiEBkatE7ScJDbpqKHdZwb///7FVC21SE3iFK3PQ==}
+
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
@@ -4936,6 +4960,15 @@ packages:
   listr2@8.2.1:
     resolution: {integrity: sha512-irTfvpib/rNiD637xeevjO2l3Z5loZmuaRi0L0YE5LfijwVY96oyVn0DFD3o/teAok7nfobMG1THvvcHh/BP6g==}
     engines: {node: '>=18.0.0'}
+
+  lit-element@4.1.1:
+    resolution: {integrity: sha512-HO9Tkkh34QkTeUmEdNYhMT8hzLid7YlMlATSi1q4q17HE5d9mrrEHJ/o8O2D0cMi182zK1F3v7x0PWFjrhXFew==}
+
+  lit-html@3.2.1:
+    resolution: {integrity: sha512-qI/3lziaPMSKsrwlxH/xMgikhQ0EGOX2ICU73Bi/YHFvz2j/yMCIrw4+puF2IpQ4+upd3EWbvnHM9+PnJn48YA==}
+
+  lit@3.2.1:
+    resolution: {integrity: sha512-1BBa1E/z0O9ye5fZprPtdqnc0BFzxIxTTOO/tQFmyC/hj1O3jL4TfmLBw0WEwjAokdLwpclkvGgDJwTIh0/22w==}
 
   loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
@@ -9565,7 +9598,7 @@ snapshots:
       react-dev-utils: 12.0.1(eslint@9.19.0(jiti@2.4.2))(typescript@5.6.3)(webpack@5.97.1)
       terser-webpack-plugin: 5.3.10(webpack@5.97.1)
       tslib: 2.6.3
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
       webpack: 5.97.1
       webpackbar: 6.0.1(webpack@5.97.1)
     transitivePeerDependencies:
@@ -9688,7 +9721,7 @@ snapshots:
       tslib: 2.6.3
       unified: 11.0.4
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
       vfile: 6.0.1
       webpack: 5.97.1
     transitivePeerDependencies:
@@ -10253,7 +10286,7 @@ snapshots:
       resolve-pathname: 3.0.0
       shelljs: 0.8.5
       tslib: 2.6.3
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
       utility-types: 3.11.0
       webpack: 5.97.1
     transitivePeerDependencies:
@@ -10379,6 +10412,12 @@ snapshots:
       '@eslint/core': 0.10.0
       levn: 0.4.1
 
+  '@giscus/react@3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      giscus: 1.6.0
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   '@hapi/hoek@9.3.0': {}
 
   '@hapi/topo@5.1.0':
@@ -10452,6 +10491,12 @@ snapshots:
     optional: true
 
   '@leichtgewicht/ip-codec@2.0.5': {}
+
+  '@lit-labs/ssr-dom-shim@1.3.0': {}
+
+  '@lit/reactive-element@2.0.4':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.3.0
 
   '@mdx-js/mdx@3.0.1':
     dependencies:
@@ -10827,6 +10872,8 @@ snapshots:
   '@types/sockjs@0.3.36':
     dependencies:
       '@types/node': 20.14.2
+
+  '@types/trusted-types@2.0.7': {}
 
   '@types/unist@2.0.10': {}
 
@@ -12738,13 +12785,6 @@ snapshots:
     dependencies:
       flat-cache: 4.0.1
 
-  file-loader@6.2.0(webpack@5.91.0):
-    dependencies:
-      loader-utils: 2.0.4
-      schema-utils: 3.3.0
-      webpack: 5.91.0
-    optional: true
-
   file-loader@6.2.0(webpack@5.97.1):
     dependencies:
       loader-utils: 2.0.4
@@ -12951,6 +12991,10 @@ snapshots:
   get-tsconfig@4.10.0:
     dependencies:
       resolve-pkg-maps: 1.0.0
+
+  giscus@1.6.0:
+    dependencies:
+      lit: 3.2.1
 
   git-raw-commits@4.0.0:
     dependencies:
@@ -13831,6 +13875,22 @@ snapshots:
       log-update: 6.0.0
       rfdc: 1.3.1
       wrap-ansi: 9.0.0
+
+  lit-element@4.1.1:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.3.0
+      '@lit/reactive-element': 2.0.4
+      lit-html: 3.2.1
+
+  lit-html@3.2.1:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@3.2.1:
+    dependencies:
+      '@lit/reactive-element': 2.0.4
+      lit-element: 4.1.1
+      lit-html: 3.2.1
 
   loader-runner@4.3.0: {}
 
@@ -16546,14 +16606,14 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1):
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1):
     dependencies:
       loader-utils: 2.0.4
       mime-types: 2.1.35
       schema-utils: 3.3.0
       webpack: 5.97.1
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.91.0)
+      file-loader: 6.2.0(webpack@5.97.1)
 
   util-deprecate@1.0.2: {}
 
