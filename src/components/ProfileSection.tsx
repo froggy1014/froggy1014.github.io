@@ -1,8 +1,6 @@
-import Link from "@docusaurus/Link";
 import { useThemeConfig } from "@docusaurus/theme-common";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
   GitHubLogoIcon,
   InstagramLogoIcon,
@@ -15,7 +13,7 @@ export default function ProfileSection() {
   const themeConfig = useThemeConfig();
 
   const name = "Jeongmin Lee";
-  const avatarUrl = useBaseUrl(themeConfig.image || "/img/avatar.jpg");
+  const avatarUrl = useBaseUrl(themeConfig.image || "/img/avatar.webp");
   const bio =
     "블리딩엣지에 서서 꾸준한 페이스로 완주까지 하고 싶은 프론트엔드 개발자 이정민입니다.";
 

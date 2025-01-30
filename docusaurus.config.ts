@@ -83,7 +83,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "https://avatars.githubusercontent.com/u/76844856?v=4",
+    image: "https://froggy1014.github.io/static/img/avatar.webp",
     colorMode: {
       defaultMode: "dark",
     },
