@@ -83,7 +83,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "https://froggy1014.github.io/static/img/avatar.webp",
+    image: "/img/avatar.webp",
     colorMode: {
       defaultMode: "dark",
     },
