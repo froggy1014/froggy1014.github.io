@@ -14,12 +14,18 @@ importers:
       '@docusaurus/core':
         specifier: 3.7.0
         version: 3.7.0(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.6.3)
+      '@docusaurus/plugin-content-blog':
+        specifier: ^3.7.0
+        version: 3.7.0(@docusaurus/plugin-content-docs@3.7.0(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.6.3))(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.6.3)
       '@docusaurus/preset-classic':
         specifier: 3.7.0
         version: 3.7.0(@algolia/client-search@5.20.0)(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(@types/react@18.3.3)(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(search-insights@2.14.0)(typescript@5.6.3)
       '@docusaurus/theme-common':
         specifier: ^3.7.0
         version: 3.7.0(@docusaurus/plugin-content-docs@3.7.0(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@19.0.0))(eslint@9.19.0(jiti@2.4.2))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.6.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@docusaurus/utils-common':
+        specifier: ^3.7.0
+        version: 3.7.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@giscus/react':
         specifier: ^3.1.0
         version: 3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -9598,7 +9604,7 @@ snapshots:
       react-dev-utils: 12.0.1(eslint@9.19.0(jiti@2.4.2))(typescript@5.6.3)(webpack@5.97.1)
       terser-webpack-plugin: 5.3.10(webpack@5.97.1)
       tslib: 2.6.3
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
       webpack: 5.97.1
       webpackbar: 6.0.1(webpack@5.97.1)
     transitivePeerDependencies:
@@ -9721,7 +9727,7 @@ snapshots:
       tslib: 2.6.3
       unified: 11.0.4
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
       vfile: 6.0.1
       webpack: 5.97.1
     transitivePeerDependencies:
@@ -9771,7 +9777,7 @@ snapshots:
       tslib: 2.6.3
       unist-util-visit: 5.0.0
       utility-types: 3.11.0
-      webpack: 5.91.0
+      webpack: 5.97.1
     transitivePeerDependencies:
       - '@docusaurus/faster'
       - '@mdx-js/react'
@@ -10286,7 +10292,7 @@ snapshots:
       resolve-pathname: 3.0.0
       shelljs: 0.8.5
       tslib: 2.6.3
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1)
       utility-types: 3.11.0
       webpack: 5.97.1
     transitivePeerDependencies:
@@ -12784,6 +12790,13 @@ snapshots:
   file-entry-cache@8.0.0:
     dependencies:
       flat-cache: 4.0.1
+
+  file-loader@6.2.0(webpack@5.91.0):
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 5.91.0
+    optional: true
 
   file-loader@6.2.0(webpack@5.97.1):
     dependencies:
@@ -16606,14 +16619,14 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1):
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.91.0))(webpack@5.97.1):
     dependencies:
       loader-utils: 2.0.4
       mime-types: 2.1.35
       schema-utils: 3.3.0
       webpack: 5.97.1
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.97.1)
+      file-loader: 6.2.0(webpack@5.91.0)
 
   util-deprecate@1.0.2: {}
 

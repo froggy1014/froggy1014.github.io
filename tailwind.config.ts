@@ -8,6 +8,9 @@ module.exports = {
   content: ["./src/**/*.{jsx,tsx,html}"],
   theme: {
     extend: {
+      colors: {
+        primary: "#2e8555",
+      },
       screens: {
         sm: "640px", // Small screens
         md: "768px", // Medium screens
