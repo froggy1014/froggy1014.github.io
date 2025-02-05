@@ -19,6 +19,7 @@ export default function BlogPostItem({
   className,
 }: Props): ReactNode {
   const containerClassName = useContainerClassName();
+  const { metadata } = useBlogPost();
   return (
     <BlogPostItemContainer className={clsx(containerClassName, className)}>
       <BlogPostItemHeader />
@@ -26,7 +27,7 @@ export default function BlogPostItem({
       <BlogPostItemFooter />
       <hr />
       <div>
-        <GiscusComponent />
+        <GiscusComponent metadata={metadata} />
       </div>
     </BlogPostItemContainer>
   );

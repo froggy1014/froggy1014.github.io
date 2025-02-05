@@ -1,18 +1,24 @@
 import React from "react";
 import Giscus from "@giscus/react";
 import { useColorMode } from "@docusaurus/theme-common";
+import { PropBlogPostMetadata } from "@docusaurus/plugin-content-blog";
 
-export default function GiscusComponent() {
+export default function GiscusComponent({
+  metadata,
+}: {
+  metadata: PropBlogPostMetadata;
+}) {
   const { colorMode } = useColorMode();
 
   return (
     <Giscus
-      id="comments"
+      id={metadata.title}
       repo="froggy1014/froggy1014.github.io"
-      repoId="3991d5d4ef0dbe17c7a8b521a8a357f7"
+      repoId="R_kgDOMHhVWw"
       category="Announcements"
-      categoryId="8d54c82ad88daab88f3caba24aeb2a82"
-      mapping="specific"
+      categoryId="DIC_kwDOMHhVW84CmeL7"
+      mapping="url"
+      strict="0"
       term="Welcome to Froggy's Blog"
       reactionsEnabled="1"
       emitMetadata="0"
