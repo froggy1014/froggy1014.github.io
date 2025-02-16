@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
           items: [
             "study/docker-kubernetes/overview",
             "study/docker-kubernetes/image-and-container",
+            "study/docker-kubernetes/volume",
           ],
         },
         "study/swr",
