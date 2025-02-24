@@ -24,6 +24,7 @@
     "@docusaurus/plugin-google-gtag": "^3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
     "@docusaurus/theme-common": "^3.7.0",
+    "@docusaurus/theme-mermaid": "^3.7.0",
     "@docusaurus/utils-common": "^3.7.0",
     "@giscus/react": "^3.1.0",
     "@mdx-js/react": "^3.0.1",
@@ -86,5 +87,6 @@
       "eslint --fix",
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.12.1+sha256.91452fdfa46234ae447d46d5c4fc4e7e0a7058f90495c4b6f77f8beebbb154e3"
 }
