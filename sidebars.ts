@@ -52,11 +52,7 @@ const sidebars: SidebarsConfig = {
         description: "기술서적 읽고 정리한 내용을 모아두는 곳입니다.",
         keywords: ["독서", "기술서적"],
       },
-      items: [
-        "reading/front-end-security",
-        "reading/front-optimize-performance",
-        "reading/typescript-book",
-      ],
+      items: ["reading/front-optimize-performance"],
     },
   ],
 };
