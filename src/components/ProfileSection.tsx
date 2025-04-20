@@ -1,6 +1,5 @@
 import { useThemeConfig } from "@docusaurus/theme-common";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-
 import {
   GitHubLogoIcon,
   InstagramLogoIcon,
@@ -12,9 +11,8 @@ import { Skeleton } from "./ui/skeleton";
 
 export default function ProfileSection() {
   const themeConfig = useThemeConfig();
-
   const name = "Jeongmin Lee";
-  const avatarUrl = useBaseUrl(themeConfig.image || "/img/avatar.webp");
+  const avatarUrl = useBaseUrl(themeConfig.image);
 
   return (
     <section className="flex flex-col items-center p-4 md:p-6 lg:p-8 text-center">
@@ -45,7 +43,9 @@ export default function ProfileSection() {
         />
       </div>
       <p className="max-w-md md:max-w-lg text-gray-600 text-base md:text-lg lg:text-xl">
-        블리딩엣지에 서서 꾸준한 페이스로 완주까지 하고 싶은 프론트엔드 개발자{" "}
+        블리딩엣지에 서서 꾸준한 페이스로 완주까지 하고 싶은
+        <br />
+        프론트엔드 개발자{" "}
         <span className="font-bold text-pretty dark:text-white">이정민</span>
         입니다.
       </p>

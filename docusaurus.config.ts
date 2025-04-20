@@ -82,7 +82,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "/img/avatar.webp",
+    image: "/img/profile.webp",
     colorMode: {
       defaultMode: "dark",
     },
